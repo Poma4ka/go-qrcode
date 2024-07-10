@@ -126,9 +126,9 @@ func WithLogoImageFilePNG(f string) ImageOption {
 }
 
 // WithQRWidth specify width of each qr block
-func WithQRWidth(width uint8) ImageOption {
+func WithQRWidth(width int) ImageOption {
 	return newFuncOption(func(oo *outputImageOptions) {
-		oo.qrWidth = int(width)
+		oo.qrWidth = width
 	})
 }
 
